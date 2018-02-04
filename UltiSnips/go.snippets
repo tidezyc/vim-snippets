@@ -1,7 +1,4 @@
-snippet json "JSON field"
-\`json:"${1:displayName}"\`
-endsnippet
-
-snippet toml "Toml field"
-\`json:"${1:displayName}"\`
+# toml field tag
+snippet toml "\`json:key\`"
+\`toml:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`
 endsnippet
