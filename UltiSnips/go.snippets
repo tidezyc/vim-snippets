@@ -1,4 +1,8 @@
 # toml field tag
-snippet toml "\`json:key\`"
+snippet toml "\`toml:key\`"
 \`toml:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`
+endsnippet
+
+snippet bindjson "\`binding:key\`"
+\`json:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}" binding:"required"\`
 endsnippet
